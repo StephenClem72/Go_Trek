@@ -1,0 +1,28 @@
+html{
+  background-image: url("../../imgs/mountain_hike.jpg");
+} /*^^^Why the hell won't this work?^^^*/
+
+#header{
+  border: 2px solid black;
+  width: 105%;
+  height: 10%;
+  text-align: center
+}
+
+
+#form-box{
+  border: 1px solid black;
+  width: 500px;
+  margin:auto;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(75%);
+  background-color: white;
+  opacity: 0.75;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 25px;
+}

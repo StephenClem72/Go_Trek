@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SignUp</title>
+  <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+  <div id='header'>
+    <h1>Go Trek</h1>
+  </div>
+  <div id='form-box'>
+    <h2>Sign up for Go Trek</h2>
+    <form action='/account/create' method='POST'>
+      <li><input type='text' placeholder='Email Address' name='account[email]'/></li>
+      <li><input type='text' placeholder='Username' name='account[username]'/></li>
+      <li><input type='password' placeholder='Password' name='account[password]'/></li>
+      <li><input type='password' placeholder='Confirm Password'/></li>
+      <li><input type='submit' value='Sign Up' name='password'/></li>
+    </form>
+  </div>
+
+</body>
+</html>
