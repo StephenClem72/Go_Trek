@@ -1,17 +1,17 @@
 get '/' do
-  'Hello'
+  erb :layout
 end
 
 get '/signup' do
-  # @user = User.new
+  @user = User.new
   erb :signup
 end
 
 post '/account/create' do
-  # @user = User.new(params[:account])
-  # if @user.save
-  #   #Redirect to their home site
-  # else
-  #   erb :signup
-  # end
+  @user = User.new(params[:account])
+  if @user.save
+    redirect '/account/:id'
+  else
+    erb :signup
+  end
 end

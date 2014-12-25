@@ -1,6 +1,7 @@
 html{
-  background-image: url("../../imgs/mountain_hike.jpg");
-} /*^^^Why the hell won't this work?^^^*/
+  background-image: url("mountain_hike.jpg");
+  background-size: 100%
+}
 
 #header{
   border: 2px solid black;
@@ -14,15 +15,26 @@ html{
   border: 1px solid black;
   width: 500px;
   margin:auto;
-  text-align: center;
   position: relative;
   top: 50%;
-  transform: translateY(75%);
+  transform: translateY(15%);
   background-color: white;
   opacity: 0.75;
+  text-align: center;
 }
 
-li {
+#info li {
   list-style: none;
   margin-bottom: 25px;
+}
+
+#errors {
+  text-align: left;
+  color: red;
+  width: 60%;
+  margin: auto;
+}
+
+#errors p {
+  text-align: center
 }

@@ -1,0 +1,38 @@
+#navbar {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+#search-bar {
+  width: 300px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#links-to-pages {
+  width: 65%;
+  margin: auto;
+  margin-top: 20px
+}
+
+#links-to-pages li{
+  display: inline-block;
+  text-align: center;
+  width: 20%;
+  list-style-type: none;
+}
+
+#account-buttons{
+  width: 100px;
+  float: right;
+  list-style-type: none;
+  margin: -62px 3% 0px 0px
+
+}
+
+#account-buttons li button{
+  width: 100px;
+  margin-bottom: 10px
+}
