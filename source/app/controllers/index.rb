@@ -4,7 +4,7 @@ end
 
 get '/signup' do
   @user = User.new
-  erb :signup
+  erb :signup, :layout => false
 end
 
 post '/account/create' do
@@ -12,6 +12,6 @@ post '/account/create' do
   if @user.save
     redirect '/account/:id'
   else
-    erb :signup
+    erb :signup, :layout => false
   end
 end
