@@ -10,7 +10,8 @@ end
 post '/account/create' do
   @user = User.new(params[:account])
   if @user.save
-    redirect '/account/:id'
+    session[:user_id] = @user.id
+    redirect '/'
   else
     erb :signup, :layout => false
   end
