@@ -1,5 +1,5 @@
 get '/' do
-  erb :layout
+  erb :home, :layout => false
 end
 
 get '/signup' do

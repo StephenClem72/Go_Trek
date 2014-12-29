@@ -4,4 +4,16 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+function toggleLoginForm(x) {
+  var panel = document.getElementById(x)
+  var maxH ='100px';
+  if(panel.style.height == maxH) {
+    panel.style.height = '0px';
+  } else {
+    panel.style.height = maxH;
+  }
+}
+
+document.getElementById('login-button').addEventListener('click', function(){toggleLoginForm('login_panel')});
+
 });

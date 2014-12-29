@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
+
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
+
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -19,11 +13,14 @@
 </head>
 <body>
   <div id='navbar'>
+    <div id='search-bar'>
+      <form action='#'>
+        <input type='text' placeholder='Search your adventure...'/>
+        <input type='submit' value='Search'/>
+        <input type='submit' value='Nearby'/>
+      </form>
+    </div>
 
-    <form id='search-bar' action='#'>
-      <input type='text' placeholder='Search your adventure...'/>
-      <input type='submit' value='Search'/>
-    </form>
 
     <div id='links-to-pages'>
         <li><a href='#'>Home</a></li>
@@ -40,11 +37,24 @@
           </form>
         </li>
         <li>
-          <button type='button'>Log In</button>
+          <button id='login-button' type='button'>Log In</button>
+          <div>
+            <form id='login_panel'>
+              <input type='email' placeholder='Email' name='account[:email]'/>
+              <input type='text' placeholder='Password' name='account[:password_hash]'/>
+              <input type='submit' value='Log In'/>
+          </div>
+
         </li>
 
     </div>
 
+  </div>
+
+  <div id='content'>
+    <div id='left-side'>
+      <img src="">
+    </div>
   </div>
 </body>
 </html>
