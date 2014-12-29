@@ -30,7 +30,7 @@
     </div>
 
     <div id='account-buttons'>
-
+      <%if @user==nil %>
         <li>
           <form action='/signup' method='get'>
             <input type='submit' value='Sign Up'/>
@@ -39,13 +39,16 @@
         <li>
           <button id='login-button' type='button'>Log In</button>
           <div>
-            <form id='login_panel'>
-              <input type='email' placeholder='Email' name='account[:email]'/>
-              <input type='text' placeholder='Password' name='account[:password_hash]'/>
+            <form id='login_panel' action='/logging_in' method='post' >
+              <input type='email' placeholder='Email' name='params[:email]'/>
+              <input type='text' placeholder='Password' name='params[:password_hash]'/>
               <input type='submit' value='Log In'/>
           </div>
 
         </li>
+      <%else%>
+        <%=@user.username%>
+      <%end%>
 
     </div>
 
@@ -53,7 +56,7 @@
 
   <div id='content'>
     <div id='left-side'>
-      <img src="">
+      <img src="../../../img/hiking.png"/>
     </div>
   </div>
 </body>
