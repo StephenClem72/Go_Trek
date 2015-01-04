@@ -4,5 +4,10 @@
   <title></title>
 </head>
 <body>
+  <% @search_trails.each do |trail| %>
+    <div>
+      <h4><%= trail.name %></h4>
+    </div>
+  <%end%>
 </body>
 </html>

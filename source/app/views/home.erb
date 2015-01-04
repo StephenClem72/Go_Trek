@@ -13,9 +13,12 @@
 </head>
 <body>
   <div id='navbar'>
+    <div id='logo'>
+      LOGO
+    </div>
     <div id='search-bar'>
-      <form action='#'>
-        <input type='text' placeholder='Search your adventure...'/>
+      <form action='/search_results/<%params[:search_results]%>' method='post'>
+        <input type='text' placeholder='Search your adventure...' name='search_results'/>
         <input type='submit' value='Search'/>
         <input type='submit' value='Nearby'/>
       </form>
@@ -23,7 +26,7 @@
 
 
     <div id='links-to-pages'>
-        <li><a href='#'>Home</a></li>
+        <li><a href='/'>Home</a></li>
         <li><a href='#'>Events</a></li>
         <li><a href='#'>About Me</a></li>
         <li><a href='#'>Write a Review</a></li>
@@ -39,15 +42,20 @@
         <li>
           <button id='login-button' type='button'>Log In</button>
           <div>
-            <form id='login_panel' action='/logging_in' method='post' >
-              <input type='email' placeholder='Email' name='params[:email]'/>
-              <input type='text' placeholder='Password' name='params[:password_hash]'/>
+            <form id='login_panel' action='/session/new' method='post' >
+              <input type='email' placeholder='Email' name='email'/>
+              <input type='password' placeholder='Password' name='password_hash'/>
+              <br>
               <input type='submit' value='Log In'/>
           </div>
 
         </li>
       <%else%>
         <%=@user.username%>
+        <form id='account_options' action='session/<%=@user.id%>' method='post'>
+          <input name="_method" type="hidden" value="delete"/>
+          <input type='submit' value='Sign Out'/>
+        </form>
       <%end%>
 
     </div>
@@ -56,7 +64,7 @@
 
   <div id='content'>
     <div id='left-side'>
-      <img src="../../../img/hiking.png"/>
+      <!-- <img src="../../../img/hiking.png"/> -->
     </div>
   </div>
 </body>

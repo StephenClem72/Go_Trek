@@ -36,7 +36,7 @@
   width: 100px;
   float: right;
   list-style-type: none;
-  margin: -62px 5% 0px 0px;
+  margin: -62px 150px 0px 0px;
 
 }
 
@@ -61,3 +61,15 @@
   margin-top: 78px
 }
 
+#googleMap{
+  width:300px;
+  height:380px;
+  margin-top: 25px;
+}
+
+#logo{
+  float:left;
+  margin-top:20px;
+  margin-left: 150px;
+  position: relative;
+}

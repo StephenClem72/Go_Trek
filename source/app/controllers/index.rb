@@ -22,12 +22,35 @@ post '/account/create' do
   end
 end
 
-post '/logging_in' do
-  @user = User.find_by(params[:email], password: params[:password_hash])
-    session[:user_id] = @user.id
-    redirect '/'
-  # end
-
+post '/session/new' do
+  @user = User.find_by(email: params[:email], password_hash: params[:password_hash])
+    if @user
+      session[:user_id] = @user.id
+      redirect '/'
+    else
+      redirect '/'
+    end
 end
+
+delete '/session/:id' do
+  session[:user_id] = nil
+  redirect '/'
+end
+
+get '/login' do
+  erb :alt_log_in
+end
+
+post '/search_results/:input' do
+  @search_trails = Trail.all(name: params[:input])
+
+  erb :search_results
+end
+
+get '/trail_info/:trail_page' do
+  erb :trail_info
+end
+
+
 
 

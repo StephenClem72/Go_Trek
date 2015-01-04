@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <link rel="stylesheet" href="/css/normalize.css">
+
+  <link rel="stylesheet" href="/css/signup.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+</head>
+<body>
+
+  <div id='header'>
+    <h1>Go Trek</h1>
+  </div>
+
+  <div id='form-box'>
+
+    <h2>Log into Go Trek</h2>
+
+    <br>
+
+    <form action='/session/new' method='POST'>
+      <div id='info'>
+      <li><input class='blank' type='text' placeholder='Email' name='email'/></li>
+      <li><input class='blank' type='password' placeholder='Password' name='password_hash'/></li>
+      <!-- <li><input class='blank' type='password' placeholder='Confirm Password'/></li> -->
+      <li><input type='submit' value='Sign Up' name='password'/></li>
+    </form>
+
+  </div>
+
+</body>
+</html>
