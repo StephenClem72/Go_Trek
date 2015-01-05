@@ -17,9 +17,8 @@
       LOGO
     </div>
     <div id='search-bar'>
-      <form action='/search_results/<%params[:search_results]%>' method='post'>
-        <input type='text' placeholder='Search your adventure...' name='search_results'/>
-        <input type='submit' value='Search'/>
+        <input type='text' id='search_results' placeholder='Search your adventure...' name='search_results'/>
+        <input type='submit' id='search' value='Search'/>
         <input type='submit' value='Nearby'/>
       </form>
     </div>
@@ -44,7 +43,7 @@
           <div>
             <form id='login_panel' action='/session/new' method='post' >
               <input type='email' placeholder='Email' name='email'/>
-              <input type='password' placeholder='Password' name='password_hash'/>
+              <input type='password' placeholder='Password' name='password'/>
               <br>
               <input type='submit' value='Log In'/>
           </div>
@@ -61,11 +60,9 @@
     </div>
 
   </div>
+  <div id='search_title'></div>
+  <div id='trail_api_result'></div>
 
-  <div id='content'>
-    <div id='left-side'>
-      <!-- <img src="../../../img/hiking.png"/> -->
-    </div>
-  </div>
+  <div id='content'></div>
 </body>
 </html>

@@ -13,7 +13,7 @@ get '/signup' do
 end
 
 post '/account/create' do
-  @user = User.new(params[:account])
+  @user = User.new(email: params[:email], username: params[:username], password_hash: params[:password])
   if @user.save
     session[:user_id] = @user.id
     redirect '/'
@@ -41,9 +41,7 @@ get '/login' do
   erb :alt_log_in
 end
 
-post '/search_results/:input' do
-  @search_trails = Trail.all(name: params[:input])
-
+post '/search_results' do
   erb :search_results
 end
 

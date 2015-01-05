@@ -4,20 +4,13 @@ class User < ActiveRecord::Base
   validates :password_hash, presence: true
   validates :username, presence: true, uniqueness: true
 
-
   def password
-    @password ||= BCrypt::Password.new(password_hash) if password_hash
-    #password_hash must match migration t.string = password_hash
+    @password ||= BCrypt::Password.new(password_hash)
   end
 
   def password=(new_password)
     @password = BCrypt::Password.create(new_password)
     self.password_hash = @password
   end
-
-  def authenticate(password)
-    self.password == password
-  end
-
 
 end

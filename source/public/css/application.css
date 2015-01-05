@@ -73,3 +73,30 @@
   margin-left: 150px;
   position: relative;
 }
+
+#trail_api_result{
+  width: 950px;
+  margin:auto;
+  margin-bottom: -20px;
+  list-style: none;
+  border:1px solid black;
+  margin-top: 35px;
+  bottom: 0px;
+}
+
+.trail{
+  height: 50px;
+  border:1px solid black;
+  width: 60%;
+  margin:auto;
+  vertical-align: center;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius:50px;
+  text-indent: 5px
+}
+
+.trail_activity{
+  float:right;
+  margin-right: 5px;
+}
