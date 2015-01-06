@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   validates :password_hash, presence: true
   validates :username, presence: true, uniqueness: true
 
+# include 'BCrypt'
+
   def password
     @password ||= BCrypt::Password.new(password_hash)
   end
@@ -12,5 +14,11 @@ class User < ActiveRecord::Base
     @password = BCrypt::Password.create(new_password)
     self.password_hash = @password
   end
+
+  def authenticate(password)
+    self.password == password
+  end
+
+
 
 end

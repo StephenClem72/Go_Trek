@@ -3,9 +3,9 @@
   width: 100%;
   text-align: center;
   position: relative;
-  background: red;
   position:absolute;
   top: 0px;
+  background-image: url('/imgs/Forest_Green_navbar.png')
 }
 
 #navbar a {
@@ -17,6 +17,10 @@
   width: 500px;
   margin: auto;
   margin-top: 7px;
+}
+
+#search_results{
+  border-radius: 25px
 }
 
 #links-to-pages {
