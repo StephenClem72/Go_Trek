@@ -1,4 +1,12 @@
-<script src="/js/search_results.js"></script>
 
-<div id='search_title'></div>
-<div id='trail_api_result'></div>
+<div id='content'>
+  <% @searched_trails.each do |hash, value| %>
+    <%value.each do |hash, value|%>
+        <div class='each_trail'>
+          <div class='trail-name'><%= hash['name'] %></div>
+          <div class='trail-location'><%=hash['city']%>, <%=hash['state']%>, <%=hash['country']%></div>
+          <div class='rating'><%=hash['activity_type']['name']%></div>
+        </div>
+      <%end%>
+  <% end %>
+</div>

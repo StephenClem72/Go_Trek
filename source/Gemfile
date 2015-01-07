@@ -21,6 +21,8 @@ gem 'dotenv'
 
 gem 'httparty'
 
+gem 'unirest'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

@@ -41,24 +41,24 @@ get '/login' do
   erb :alt_log_in
 end
 
-# get '/search_results' do
-#   @trail_search = params[:searched_input]
-#   redirect '/search_results/#{@trail_search}'
-# end
-
-# get '/search_results/:trail' do
-#   erb :search_results
-# end
-
 get '/trail_info/:trail_page' do
   erb :trail_info
 end
 
+
 post '/search_results' do
-  @results = params[:search_results]
-  api= GoTrek::Client.new(ENV['TRAIL_API_KEY'], 'Awesome-Stuff')
-  @server_response = api.places(params[:search_results])
-  redirect '/display_page/#{server_response}'
+  @searched_trails=trail_api(params[:searched_input])
+  erb :search_results
+  # redirect '/search_results/#{@searched_trails}'
+
+
+
+
+
+
+
+  # @server_response = api.places(@results)
+  # redirect '/display_page/#{@server_response}'
 
   # parse your params to find the value of what was in the form, set that equal to a var
   # using something like HTTParty or `curl', hit the API endpoint and pass in the search term (whatevers in your var)
@@ -69,8 +69,8 @@ post '/search_results' do
   # redirect to a new page and pass all your information as params
 end
 
-get '/search_results/:trail' do
-  # @places = params[]
+get '/search_results/:trails_searched' do
+  @search_output = params[:trails_searched]
   erb :search_results
 end
 

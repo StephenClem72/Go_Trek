@@ -88,19 +88,35 @@
   bottom: 0px;
 }
 
-.trail{
-  height: 50px;
+
+
+.each_trail{
+  margin:auto;
+  list-style:none;
+  height: 90px;
   border:1px solid black;
   width: 60%;
-  margin:auto;
-  vertical-align: center;
   padding: 5px;
   margin-bottom: 5px;
   border-radius:50px;
   text-indent: 5px
 }
 
-.trail_activity{
-  float:right;
-  margin-right: 5px;
+.trail-name{
+  /*width: 365px;*/
+  /*border: 1px solid black;*/
+  font-size: 30px;
+  margin-left:13px;
+  margin-top: 30px;
+  position: absolute;
+}
+
+.trail-location{
+  position: relative;
+  float: bottom;
+  width: 365px;
+  /*border: 1px solid black;*/
+  margin: auto;
+  margin-top: 75px;
+  margin-left:25px;
 }
