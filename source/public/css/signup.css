@@ -1,10 +1,18 @@
-
+html{
+  background-image: url('/imgs/signupbackground.jpg');
+  background-size: 100%
+}
 
 #header{
   margin: auto;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   height: 10%;
   text-align: center;
+}
+
+#header img{
+  height:50px;
+  border:none;
 }
 
 
@@ -15,7 +23,7 @@
   position: relative;
   transform: translateY(12%);
   background-color: white;
-  opacity: 0.75;
+  opacity: 0.92;
   text-align: center;
 }
 

@@ -1,11 +1,15 @@
 
+
+
 <div id='content'>
+  <div>
+    <h1 id ='search_header'>Here are your search results for: <%=@input.capitalize%></h1>
   <% @searched_trails.each do |hash, value| %>
     <%value.each do |hash, value|%>
         <div class='each_trail'>
           <div class='trail-name'><%= hash['name'] %></div>
           <div class='trail-location'><%=hash['city']%>, <%=hash['state']%>, <%=hash['country']%></div>
-          <div class='rating'><%=hash['activity_type']['name']%></div>
+          <%@activity = hash['activities'].first%>
         </div>
       <%end%>
   <% end %>

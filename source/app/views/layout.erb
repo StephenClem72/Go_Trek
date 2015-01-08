@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
+  <link rel="icon" type="image/png" href="/imgs/download.png" />
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -12,7 +13,7 @@
 <body>
   <div id='navbar'>
     <div id='logo'>
-      LOGO
+      <a href='/'><img src='/imgs/GoTrekLogo.png'></a>
     </div>
     <div id='search-bar'>
         <form action='/search_results' method = 'post'>
@@ -33,7 +34,7 @@
       <%if @user==nil %>
         <li>
           <form action='/signup' method='get'>
-            <input type='submit' value='Sign Up'/>
+            <input id='signup'type='submit' value='Sign Up'/>
           </form>
         </li>
         <li>
@@ -48,10 +49,10 @@
 
         </li>
       <%else%>
-        <%=@user.username%>
+        <div id='username'><%=@user.username%></div>
         <form id='account_options' action='session/<%=@user.id%>' method='post'>
           <input name="_method" type="hidden" value="delete"/>
-          <input type='submit' value='Sign Out'/>
+          <input type='submit' id='signoutbutton' value='Sign Out'/>
         </form>
       <%end%>
 

@@ -1,3 +1,7 @@
+html{
+  background: #DCDCDC
+}
+
 #navbar {
   height: 75px;
   width: 100%;
@@ -11,6 +15,8 @@
 #navbar a {
   text-decoration: none;
   color:black;
+  font-size: 20px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 #search-bar {
@@ -26,7 +32,9 @@
 #links-to-pages {
   width: 65%;
   margin: auto;
-  margin-top: 20px
+  margin-top: 13px;
+  text-align:center;
+  padding-right:60px
 }
 
 #links-to-pages li{
@@ -34,35 +42,67 @@
   text-align: center;
   width: 20%;
   list-style-type: none;
+  transition: all .2s ease-in-out;
+}
+
+#links-to-pages li:hover{
+  transform: scale(1.10)
+}
+
+#signup{
+  width:80px;
+  margin-bottom: 3px;
+  margin-top:4px;
+  background:#32CD32;
+  border-radius:10px;
+}
+
+#signup:hover{
+  background-color: #228B22
 }
 
 #account-buttons{
   width: 100px;
   float: right;
   list-style-type: none;
-  margin: -62px 150px 0px 0px;
+  margin: -62px 150px 5px 0px;
 
 }
 
+#account-buttons li button:hover{
+  background-color: #228B22
+}
+
 #account-buttons li button{
-  width: 100px;
-  margin-bottom: 10px
+  width: 80px;
+  margin-bottom: 10px;
+  background:#32CD32;
+  border-radius:10px;
 }
 
 #login_panel{
   position: absolute;
   z-index: 10000;
   height: 0px;
+  width:200px;
   overflow: hidden;
   transition: height 0.3s linear 0s;
-  margin-left: -100px
+  margin-left: -100px;
+  background:#008000;
+  border-radius: 10px;
+  opacity:0.90;
+}
+
+#login_panel input{
+  margin-bottom: 10px
 }
 
 #content{
-  border: 1px solid black;
+  border: 1px solid gray;
   margin:auto;
   width: 950px;
-  margin-top: 78px
+  margin-top: 50px;
+  padding-top:30px;
 }
 
 #googleMap{
@@ -73,9 +113,14 @@
 
 #logo{
   float:left;
-  margin-top:20px;
-  margin-left: 150px;
+  margin-top:18px;
+  margin-left: 155px;
   position: relative;
+}
+
+#logo img{
+  height:50px;
+  border:none;
 }
 
 #trail_api_result{
@@ -88,9 +133,8 @@
   bottom: 0px;
 }
 
-
-
 .each_trail{
+  background-image: url('/imgs/each_trail_background.jpeg');
   margin:auto;
   list-style:none;
   height: 90px;
@@ -99,7 +143,7 @@
   padding: 5px;
   margin-bottom: 5px;
   border-radius:50px;
-  text-indent: 5px
+  text-indent: 5px;
 }
 
 .trail-name{
@@ -120,3 +164,62 @@
   margin-top: 75px;
   margin-left:25px;
 }
+
+#search_header{
+  margin:auto;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#mountain_img{
+  height: 350px;
+  width:600px;
+  margin-top: 20px;
+  margin-left: 13px;
+}
+
+#snowhike{
+  float: right;
+  width: 305px;
+  margin-top: 20px;
+  margin-right: 13px;
+}
+
+#camping{
+  height: 200px;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 13px;
+  margin-bottom: 13px;
+}
+
+#mountainbike{
+  width:284px;
+  height: 200px;
+  margin-left: 7px;
+  margin-bottom:13px;
+}
+
+img {
+  transition: all .2s ease-in-out;
+  border: 2px solid black;
+}
+
+img:hover {
+  transform: scale(1.01);
+}
+
+#signoutbutton{
+  width:80px;
+  margin-bottom: 3px;
+  margin-top:4px;
+  background:#32CD32;
+  border-radius:10px;
+}
+
+#signoutbutton:hover{
+  background-color: #228B22
+}
+
+
+
