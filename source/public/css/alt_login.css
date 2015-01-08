@@ -1,0 +1,40 @@
+html{
+  background-image:url('/imgs/alt_login_background.jpg');
+  background-size: 100%;
+}
+
+#header{
+  margin: auto;
+  /*border: 1px solid black;*/
+  height: 10%;
+  text-align: center;
+}
+
+#header img{
+  height:50px;
+  border:none;
+}
+
+
+#form-box{
+  border: 1px solid black;
+  width: 400px;
+  margin:auto;
+  margin-top: 50px;
+  position: relative;
+  transform: translateY(12%);
+  background-color: white;
+  opacity: 0.80;
+  text-align: center;
+}
+
+#info li {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.blank {
+  height: 20px;
+  width: 200px;
+  font-size: 15px
+}

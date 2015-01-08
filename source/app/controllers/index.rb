@@ -38,7 +38,7 @@ delete '/session/:id' do
 end
 
 get '/login' do
-  erb :alt_log_in
+  erb :alt_log_in, :layout => false
 end
 
 get '/trail_info/:trail_page' do

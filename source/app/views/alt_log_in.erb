@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SignUp</title>
+  <link rel="stylesheet" href="/css/alt_login.css">
+  <link rel="icon" type="image/png" href="/imgs/GoTrekFavicon.png" />
+</head>
+<body>
+
+  <div id='header'>
+    <a href='/'><img src='/imgs/GoTrekLogo.png'></a>
+  </div>
+
+  <div id='form-box'>
+
+    <h2>Log into for Go Trek</h2>
+
+    <br>
+
+    <form action='/session/new' method='POST'>
+      <div id='info'>
+      <li><input class='blank' type='text' placeholder='Email Address' name='email'/></li>
+      <li><input class='blank' type='password' placeholder='Password' name='password_hash'/></li>
+      <!-- <li><input class='blank' type='password' placeholder='Confirm Password'/></li> -->
+      <li><input type='submit' value='Sign Up'/></li>
+    </form>
+
+  </div>
+
+</body>
+</html>
