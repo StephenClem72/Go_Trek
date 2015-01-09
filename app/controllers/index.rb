@@ -47,28 +47,9 @@ end
 
 
 post '/search_results' do
-  p @input = params[:searched_input]
+  @input = params[:searched_input]
   @searched_trails=trail_api(params[:searched_input])
-  p @searched_trails
-  # erb :search_results
-  # redirect '/search_results/#{@searched_trails}'
-
-
-
-
-
-
-
-  # @server_response = api.places(@results)
-  # redirect '/display_page/#{@server_response}'
-
-  # parse your params to find the value of what was in the form, set that equal to a var
-  # using something like HTTParty or `curl', hit the API endpoint and pass in the search term (whatevers in your var)
-  # manually create some of key val pair
-  # params[:places] = LOOK AT THE DOCUMENTATION
-  # redirect '/some-page?firstkey=foo'
-  # redirect "/some-page?places=#{variable containing params}"
-  # redirect to a new page and pass all your information as params
+  erb :search_results
 end
 
 get '/search_results/:trails_searched' do
