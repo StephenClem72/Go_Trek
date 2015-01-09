@@ -2,12 +2,11 @@
   <div>
     <h1 id ='search_header'>Here are your search results for: <%=@input.capitalize%></h1>
   <% @searched_trails.each do |hash, value| %>
-    <%value.each do |hash, value|%>
+    <%value.each do |attribute, detail|%>
         <div class='each_trail'>
-          <div class='trail-name'><%= hash['name'] %></div>
-          <div class='trail-location'><%=hash['city']%>, <%=hash['state']%>, <%=hash['country']%></div>
-          <%@activity = hash['activities'].first%>
-        </div>
-      <%end%>
+          <div class='trail-name'><%= attribute['name'] %></div>
+          <div class='trail-location'><%=attribute['city']%>, <%=attribute['state']%>, <%=attribute['country']%></div>
+       </div>
+    <%end%>
   <% end %>
 </div>

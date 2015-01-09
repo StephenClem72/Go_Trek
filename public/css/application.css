@@ -225,5 +225,17 @@ img:hover {
 
 }
 
+/*.activity-type{
+  float: left;
+  margin-top: -310px;
+  margin-left: 24px
+}*/
+
+.trail-length{
+  float: right;
+  margin-top: -310px;
+  margin-right: 24px
+}
+
 
 

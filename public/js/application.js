@@ -29,16 +29,19 @@ function toggleLoginForm(x) {
 
 document.getElementById('login-button').addEventListener('click', function(){toggleLoginForm('login_panel')});
 
-$('#login_panel').on('submit', function(evenet){
+$('#loggy').on('click', function(evenet){
   event.preventDefult();
 
   $.ajax({
+    type: 'POST',
     url: '/session/new',
-    type: 'POST'
-    data: $('#login_panel').serialize(),
-    dataType: 'json'
+    data: $(this).serialize(),
+    dataType: 'json',
+  }).done(function(data){
+    data
   })
 })
+
 
 // google.maps.event.addDomListener(window, 'load', initialize);
 

@@ -22,6 +22,12 @@ post '/account/create' do
   end
 end
 
+post '/alt_log_in/session/new' do
+  @user = User.find_by(email: params[:email])
+  @user.to_json
+    session[:user_id] = @user.id if @user && @user.authenticate(params[:password_hash])
+end
+
 post '/session/new' do
   @user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password_hash])
@@ -49,6 +55,9 @@ end
 post '/search_results' do
   @input = params[:searched_input]
   @searched_trails=trail_api(params[:searched_input])
+  # @activity_type = @searched_trails['places'].first['activities'].first['activity_type']['name']
+  # @trail_length = @searched_trails['places'].first['activities'].first['length']
+  # @rating =
   erb :search_results
 end
 
