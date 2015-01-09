@@ -47,7 +47,7 @@ end
 
 
 post '/search_results' do
-  @input = params[:searched_input]
+  p @input = params[:searched_input]
   @searched_trails=trail_api(params[:searched_input])
   p @searched_trails
   # erb :search_results
