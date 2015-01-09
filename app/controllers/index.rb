@@ -65,11 +65,3 @@ get '/search_results/:trails_searched' do
   @search_output = params[:trails_searched]
   erb :search_results
 end
-
-
-# <% @places.each do |place| %>
-#   <% end %>
-
-
-
-

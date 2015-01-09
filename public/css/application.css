@@ -237,5 +237,46 @@ img:hover {
   margin-right: 24px
 }
 
+#nature_text{
+  position: absolute;
+  margin-top: -300px;
+  color: white;
+  margin-left: 190px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: 50px;
+  text-shadow: 2px 2px gray;
+}
 
+#mountain_text{
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  margin-top: -220px;
+  text-shadow: 2px 2px black;
+  font-size: 35px;
+  margin-left: 650px;
+  position: absolute;
+}
+
+#bike-text{
+  position: absolute;
+  font-size: 20px;
+  margin-top: -210px;
+  margin-left: 510px;
+  width:100px;
+  text-align: right;
+  text-shadow: 1px 1px white;
+}
+
+#camp_text{
+  position: absolute;
+  font-size: 20px;
+  margin-top: -70px;
+  margin-left: 20px;
+  width: 300px;
+  text-align: center;
+  color:white;
+  text-shadow:1px 1px black;
+}
 
