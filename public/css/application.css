@@ -222,7 +222,8 @@ img:hover {
 }
 
 #username{
-
+ width: 150px;
+ text-align:left;
 }
 
 /*.activity-type{
