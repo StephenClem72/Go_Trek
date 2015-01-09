@@ -49,7 +49,8 @@ end
 post '/search_results' do
   @input = params[:searched_input]
   @searched_trails=trail_api(params[:searched_input])
-  erb :search_results
+  p @searched_trails
+  # erb :search_results
   # redirect '/search_results/#{@searched_trails}'
 
 
